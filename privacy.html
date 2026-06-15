@@ -1,6 +1,70 @@
-<!-- REEMPLAZAR con el contenido real de privacy.html -->
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="utf-8"><title>Política de Privacidad — EcomOps</title></head>
-<body><p>Contenido pendiente.</p></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidad — EcomOps</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.05rem; margin-top: 28px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: #1a73e8; }
+    footer { margin-top: 48px; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; padding-top: 16px; }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidad</h1>
+<p class="meta">EcomOps · Última actualización: 15 de junio de 2026</p>
+
+<p>Esta política describe qué datos maneja EcomOps (en adelante, "la aplicación" o "EcomOps"), cómo los usa y cómo los protege. EcomOps es una herramienta que se ejecuta dentro de Google Sheets y permite a vendedores de MercadoLibre gestionar la operación de despacho de sus envíos (descarga e impresión de etiquetas, sincronización de órdenes) sin salir de su planilla.</p>
+
+<h2>1. Quién es responsable de tus datos</h2>
+<p>El responsable del tratamiento de datos es Juan Ignacio Ferrero, operador de EcomOps. Para cualquier consulta sobre privacidad podés escribir a <a href="mailto:ferrerojignacio@gmail.com">ferrerojignacio@gmail.com</a>.</p>
+
+<h2>2. Qué datos recopilamos y almacenamos</h2>
+<p>EcomOps fue diseñado para almacenar la menor cantidad de datos posible. Concretamente, en nuestros servidores almacenamos únicamente:</p>
+<ul>
+  <li>Tokens de autorización de MercadoLibre (token de acceso y token de actualización), necesarios para conectarnos a tu cuenta de MercadoLibre en tu nombre.</li>
+  <li>El identificador numérico de tu cuenta de vendedor de MercadoLibre (seller_id).</li>
+  <li>Un identificador técnico de tu planilla de Google Sheets (script_id), utilizado para mantener aislada la información de cada usuario.</li>
+</ul>
+
+<h2>3. Qué datos NO almacenamos</h2>
+<p>EcomOps no almacena en sus servidores los datos de tus órdenes ni de tus compradores. La información de las ventas (nombre del comprador, dirección de envío, teléfono, detalle de la orden, montos) se procesa de forma transitoria en memoria y se escribe directamente en tu propia planilla de Google Sheets. Esos datos quedan exclusivamente en tu planilla, bajo tu control.</p>
+<p>De igual modo, las etiquetas de envío (archivos PDF) se descargan de MercadoLibre y se guardan directamente en tu propio Google Drive. EcomOps no conserva copias de esas etiquetas en sus servidores.</p>
+
+<h2>4. Uso de las APIs de Google y de MercadoLibre</h2>
+<p>EcomOps solicita los siguientes permisos de Google, limitados al mínimo necesario para funcionar:</p>
+<ul>
+  <li><strong>spreadsheets.currentonly</strong> — para leer y escribir datos únicamente en la planilla desde la que se ejecuta la aplicación.</li>
+  <li><strong>drive.file</strong> — para crear y administrar únicamente los archivos (etiquetas PDF) que la propia aplicación genera en tu Google Drive. EcomOps no puede ver ni acceder a otros archivos de tu Drive.</li>
+</ul>
+<p>El uso y la transferencia de la información recibida de las APIs de Google por parte de EcomOps se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de las API de Google</a>, incluidos los requisitos de Uso Limitado (Limited Use).</p>
+<p>EcomOps también se conecta a la API de MercadoLibre mediante autorización OAuth para obtener tus órdenes y descargar tus etiquetas de envío. Esta conexión opera únicamente sobre la cuenta de MercadoLibre que vos autorizás.</p>
+
+<h2>5. Para qué usamos los datos</h2>
+<p>Los datos que almacenamos se utilizan exclusivamente para que la aplicación funcione: mantener tu sesión con MercadoLibre activa, sincronizar tus órdenes en tu planilla y descargar tus etiquetas. No usamos tus datos con fines publicitarios, no los vendemos ni los compartimos con terceros para ningún otro propósito.</p>
+
+<h2>6. Con quién compartimos datos</h2>
+<p>No vendemos ni alquilamos tus datos. Los únicos terceros involucrados son los proveedores de infraestructura que hacen funcionar el servicio (alojamiento de la aplicación y base de datos), que procesan los datos únicamente por cuenta nuestra y bajo sus propias políticas de seguridad. Podemos divulgar información si la ley nos obliga a hacerlo.</p>
+
+<h2>7. Conservación y eliminación</h2>
+<p>Conservamos tus tokens de autorización e identificadores mientras tu cuenta esté conectada a EcomOps. Podés revocar el acceso en cualquier momento desde la configuración de seguridad de tu cuenta de Google (<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>) y de tu cuenta de MercadoLibre. Si querés que eliminemos los datos asociados a tu cuenta de nuestros servidores, escribinos a <a href="mailto:ferrerojignacio@gmail.com">ferrerojignacio@gmail.com</a> y los borraremos.</p>
+
+<h2>8. Seguridad</h2>
+<p>Aplicamos medidas razonables para proteger los datos que almacenamos, incluyendo el cifrado en tránsito (HTTPS) y el acceso restringido a la base de datos. Ningún sistema es completamente infalible, pero limitamos deliberadamente la cantidad de datos que conservamos para reducir cualquier riesgo.</p>
+
+<h2>9. Cambios en esta política</h2>
+<p>Podemos actualizar esta política ocasionalmente. La fecha de "última actualización" en la parte superior refleja la versión vigente. Si hacemos cambios sustanciales, procuraremos notificarlos por los medios disponibles.</p>
+
+<h2>10. Contacto</h2>
+<p>Por cualquier consulta sobre esta política o sobre el tratamiento de tus datos: <a href="mailto:ferrerojignacio@gmail.com">ferrerojignacio@gmail.com</a>.</p>
+
+<footer>EcomOps · <a href="/privacy.html">Política de Privacidad</a> · <a href="/terms.html">Términos y Condiciones</a></footer>
+
+</body>
 </html>
