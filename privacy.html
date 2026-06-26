@@ -35,14 +35,17 @@
 
 <h2>3. Qué datos NO almacenamos</h2>
 <p>EcomOps no almacena en sus servidores los datos de tus órdenes ni de tus compradores. La información de las ventas (nombre del comprador, dirección de envío, teléfono, detalle de la orden, montos) se procesa de forma transitoria en memoria y se escribe directamente en tu propia planilla de Google Sheets. Esos datos quedan exclusivamente en tu planilla, bajo tu control.</p>
-<p>De igual modo, las etiquetas de envío (archivos PDF) se descargan de MercadoLibre y se guardan directamente en tu propio Google Drive. EcomOps no conserva copias de esas etiquetas en sus servidores.</p>
+<p>De igual modo, las etiquetas de envío (archivos PDF) se generan a pedido a partir de MercadoLibre y se sirven a través de enlaces temporales y firmados que expiran a los 14 días. EcomOps no almacena estas etiquetas de forma permanente ni las comparte con terceros.</p>
 
 <h2>4. Uso de las APIs de Google y de MercadoLibre</h2>
 <p>EcomOps solicita los siguientes permisos de Google, limitados al mínimo necesario para funcionar:</p>
 <ul>
   <li><strong>spreadsheets.currentonly</strong> — para leer y escribir datos únicamente en la planilla desde la que se ejecuta la aplicación.</li>
-  <li><strong>drive.file</strong> — para crear y administrar únicamente los archivos (etiquetas PDF) que la propia aplicación genera en tu Google Drive. EcomOps no puede ver ni acceder a otros archivos de tu Drive.</li>
+  <li><strong>script.external_request</strong> — para conectarse a nuestro servidor backend, que autentica tu cuenta de MercadoLibre y obtiene tus etiquetas de envío.</li>
+  <li><strong>script.container.ui</strong> — para mostrar la interfaz de la aplicación (barra lateral y diálogos) dentro de Google Sheets.</li>
+  <li><strong>script.storage</strong> — para guardar tu estado de sesión entre usos, de modo que no tengas que reconectarte cada vez.</li>
 </ul>
+<p>EcomOps no solicita acceso a Google Drive.</p>
 <p>El uso y la transferencia de la información recibida de las APIs de Google por parte de EcomOps se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de las API de Google</a>, incluidos los requisitos de Uso Limitado (Limited Use).</p>
 <p>EcomOps también se conecta a la API de MercadoLibre mediante autorización OAuth para obtener tus órdenes y descargar tus etiquetas de envío. Esta conexión opera únicamente sobre la cuenta de MercadoLibre que vos autorizás.</p>
 
