@@ -34,6 +34,11 @@
     nav a { color: #1a73e8; text-decoration: none; margin: 0 10px; }
     nav a:hover { text-decoration: underline; }
     footer { margin-top: 28px; font-size: 0.8rem; color: #999; }
+    section.about { text-align: left; margin: 0 auto 32px; max-width: 480px; }
+    section.about p { color: #444; margin: 0 0 18px; }
+    section.about h2 { font-size: 1.05rem; color: #222; margin: 24px 0 8px; }
+    section.about a { color: #1a73e8; }
+    code { background: #f1f3f4; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #202124; }
     @media (max-width: 480px) {
       main { padding: 36px 22px; }
       h1 { font-size: 2rem; }
@@ -45,6 +50,18 @@
   <main>
     <h1>EcomOps</h1>
     <p class="tagline">Descargá e imprimí todas las etiquetas de tus envíos de MercadoLibre en segundos, sin salir de Google Sheets.</p>
+
+    <section class="about">
+      <h2>Qué es</h2>
+      <p>EcomOps es un complemento (add-on) de Google Sheets para vendedores de MercadoLibre. Permite descargar e imprimir todas las etiquetas de envío en segundos, gestionar el histórico de despachos y operar múltiples cuentas de MercadoLibre, directamente desde tu hoja de cálculo, sin salir de Google Sheets.</p>
+
+      <h2>Datos de Google que utiliza</h2>
+      <p>EcomOps accede únicamente a la hoja de cálculo activa donde ejecutás el complemento (permiso <code>spreadsheets.currentonly</code>), para leer y escribir los datos de despacho y etiquetas. No accede a Google Drive ni a ningún otro archivo de tu cuenta.</p>
+
+      <h2>Desarrollador</h2>
+      <p>Desarrollado por Juan Ignacio Ferrero. Contacto: <a href="mailto:ferrerojignacio@gmail.com">ferrerojignacio@gmail.com</a></p>
+    </section>
+
     <nav>
       <a href="/privacy">Política de Privacidad</a> ·
       <a href="/terms">Términos y Condiciones</a>
